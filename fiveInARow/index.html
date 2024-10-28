@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Monte-Carlo Five-In-A-Row Javascript game</title>
+        <meta name="author" content="Markus Kiili" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
+
+        <div id="board">
+            <div class="header">
+                <h1>Monte-Carlo 5-In-A-Row <span id="result_span"></span></h1>
+            </div>
+            <div class="header">
+                <button id="new_game_button">New Game</button>
+                <button id="force_move_button">Computer starts</button>
+                <span title="Higher level gives computer more time to think"
+                    >Computer level (1-10)</span
+                >
+                <input
+                    type="number"
+                    value="2"
+                    id="thinking_time_input"
+                    min="1"
+                    max="10"
+                />
+                <progress id="progress" value="0" max="100"></progress>
+            </div>
+            <div id="grid"></div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"
+        ></script>
+        <script src="app.js" async defer></script>
+    </body>
+</html>
